@@ -1,0 +1,23 @@
+/*VENDOR*/
+@import "vendor/normalize.scss";
+
+/*VARIABLES*/
+@import "variables/variables.scss";
+
+/*MIXINS*/
+@import "mixins/mixins.scss";
+
+/*MODULES*/
+@import "modules/global.scss";
+@import "modules/main-nav.scss";
+@import "modules/mobile-nav.scss";
+@import "modules/fonts.scss";
+@import "modules/header-slider.scss";
+@import "modules/text-image-box.scss";
+@import "modules/product.scss";
+@import "modules/footer.scss";
+@import "modules/product-link.scss";
+@import "modules/link.scss";
+@import "modules/social-media-wall-curator";
+@import "modules/separator";
+@import "modules/cookiebanner";

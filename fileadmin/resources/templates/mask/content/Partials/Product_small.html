@@ -1,0 +1,30 @@
+
+<f:link.typolink parameter="{product.data.pid}" class="link">
+
+    <picture class="picture">
+        <source 
+            media="(max-width: 812px)" 
+            srcset="{f:uri.image(image:'{product.files.0}', height:'500c', width:'500c', treatIdAsReference:'1')}, 
+                    {f:uri.image(image:'{product.files.0}', height:'1000c', width:'1000c', treatIdAsReference:'1')} 2x"
+        >
+
+        <source 
+            media="(max-width: 1280px)" 
+            srcset="{f:uri.image(image:'{product.files.0}', height:'800c', width:'800c', treatIdAsReference:'1')}, 
+                    {f:uri.image(image:'{product.files.0}', height:'1600c', width:'1600c', treatIdAsReference:'1')} 2x"
+        >
+
+        <f:image image="{product.files.0}"
+            height="350c"
+            width="550c"
+            title="{product.data.header}"
+            alt="{product.data.header}"
+            treatIdAsReference="1"
+        />
+    </picture>
+
+
+    <h2 class="header">{product.data.header}</h2>
+    <span class="price">{product.data.tx_mask_price} €</span>
+
+</f:link.typolink>

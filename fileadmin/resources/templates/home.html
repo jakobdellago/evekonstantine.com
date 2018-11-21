@@ -1,0 +1,70 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{v:content.get(column: 100, pageUid: 1, limit: 1) -> f:variable(name: 'general_data')}
+
+<html>
+
+    <body>
+    	<div class="cookiebanner hidden">
+    		<f:render partial="Cookiebanner" arguments="{cookiebanner_text: general_data.0.bodytext}"/> 
+    	</div>
+
+			<v:condition.iterator.contains needle="8" haystack="{v:page.rootline() -> v:iterator.extract(key: 'uid')}">
+   				<f:then>
+   					<div class="main-container product-detail-page">
+   				</f:then>
+   				<f:else>
+   					<div class="main-container">
+   				</f:else>
+			</v:condition.iterator.contains>
+
+			<div class="main-nav">
+				<f:format.raw>{MAINMENU}</f:format.raw>
+			</div>
+
+			<div class="mobile-nav">
+			    <div class="header">
+			    	<a href="http://www.jozeedesign.at">
+				    	<div class="logo">
+					        <img src="http://www.jozeedesign.at/fileadmin/resources/images/logo_comprimized.jpg"
+					            title="jozeeDesign"
+					            alt="jozeeDesign"
+					            srcset="{f:uri.image(src:'fileadmin/resources/images/logo_comprimized.jpg', width:'110c')},
+			                    {f:uri.image(src:'fileadmin/resources/images/logo_comprimized.jpg', width:'220c')} 2x,
+			                    {f:uri.image(src:'fileadmin/resources/images/logo_comprimized.jpg', width:'330c')} 3x"
+					        />
+						</div>
+					</a>
+					<div class="menu-opener">
+					    <div class="line"></div>
+					    <div class="line"></div>
+					    <div class="line"></div>
+					</div>
+			    </div>
+				<f:format.raw>{MOBILEMENU}</f:format.raw>
+			</div>
+
+			<f:format.raw>{HEADERSLIDER}</f:format.raw>
+
+			<div class="content">
+				<f:format.raw>{CONTENT}</f:format.raw>
+				<v:condition.iterator.contains needle="8" haystack="{v:page.rootline() -> v:iterator.extract(key: 'uid')}">
+	   				<f:format.raw>{SMALL_SLIDER}</f:format.raw>
+				</v:condition.iterator.contains>
+			</div>
+
+			<f:render partial="footer" arguments="{general_data: general_data.0}"/> 
+		</div>
+		<script src="http://jozeedesign.at/fileadmin/resources/javascript/main.js"></script>
+	</body>
+
+   <f:comment>
+   		<body class="no-be-login">
+		   	  <img src="fileadmin\resources\images\work_in_progress.jpg" alt="work-in-progress" title="work-in-progress">
+		      <h1>
+		      		Please log in too see content: <a href="http://jozeedesign.at/typo3/">http://jozeedesign.at/typo3/</a>
+	   		  </h1>
+  		</body>
+   </f:comment>
+
+
+</html>

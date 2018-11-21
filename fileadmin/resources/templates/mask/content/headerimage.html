@@ -1,0 +1,45 @@
+<div class="header-slider">
+
+
+	<f:if condition="{data.image}">
+		<f:for each="{data.image}" as="file">
+
+			<picture class="picture">
+		        <source 
+		        	media="(max-width: 812px)" 
+		        	srcset="{f:uri.image(image:'{file}', width:'812c', treatIdAsReference:'1')}, 
+		        			{f:uri.image(image:'{file}', width:'1624', treatIdAsReference:'1')} 2x"
+		        >
+
+		        <source 
+		            media="(max-width: 1280px)" 
+		            srcset="{f:uri.image(image:'{file}', width:'1280c', treatIdAsReference:'1')}, 
+		                    {f:uri.image(image:'{file}', width:'1920c', treatIdAsReference:'1')} 2x"
+		        >
+
+		        <f:image image="{file}"
+		            width="1920c"
+		            title="jozeeDesign"
+		            alt="jozeeDesign"
+		            treatIdAsReference="1"
+		        />
+			</picture>
+
+		</f:for>
+	</f:if>
+
+	<div class="content-wrapper">
+		<div class="text">
+			<f:format.html>{data.bodytext}</f:format.html>
+		</div>
+		<div class="scroll-button">
+			<span>mehr</span>
+			<i class="icon-arrow-down"></i>
+		</div>
+	</div>
+
+
+
+
+
+</div>

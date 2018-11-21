@@ -1,0 +1,60 @@
+
+<div class="text-image-box content-element">
+	<div class="text-wrapper">
+
+		<f:if condition="{data.header}">
+				<h1 class="header">{data.header}</h1>
+		</f:if>
+
+		<f:if condition="{data.subheader}">
+				<h2 class="subheader">{data.subheader}</h2>
+		</f:if>
+
+		<f:if condition="{data.bodytext}">
+			<div class="text">
+				<f:format.html>{data.bodytext}</f:format.html>
+			</div>
+		</f:if>
+
+		<f:if condition="{data.header_link}">
+			<div class="more-button">
+				<f:link.typolink parameter="{data.header_link}" title="button">
+					<span>mehr</span>
+					<i class="icon-arrow-right"></i>
+				</f:link.typolink>
+			</div>
+		</f:if>
+
+	</div>
+
+	<f:if condition="{data.image}">
+	<f:for each="{data.image}" as="file">
+
+	    <picture class="picture">
+	        <source 
+	        	media="(max-width: 812px)" 
+	        	srcset="{f:uri.image(image:'{file}', height:'500c', width:'800c', treatIdAsReference:'1')}, 
+	        			{f:uri.image(image:'{file}', height:'1000c', width:'1600c', treatIdAsReference:'1')} 2x"
+	        >
+
+	        <source 
+	            media="(max-width: 1280px)" 
+	            srcset="{f:uri.image(image:'{file}', height:'390c', width:'640c', treatIdAsReference:'1')}, 
+	                    {f:uri.image(image:'{file}', height:'780c', width:'1280c', treatIdAsReference:'1')} 2x"
+	        >
+
+	        <f:image image="{file}"
+	            height="1000c"
+	            width="1600c"
+	            title="{file.title}"
+	            alt="{file.alternative}"
+	            treatIdAsReference="1"
+	        />
+    	</picture>
+
+	</f:for>
+	</f:if>
+</div>
+
+
+

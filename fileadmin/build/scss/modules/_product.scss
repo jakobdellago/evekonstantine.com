@@ -1,0 +1,146 @@
+.product {
+	margin: 40px 40px 30px;
+	.header {
+		@include header;
+		margin-top: 30px;
+	}
+	.subheader {
+		@include subheader;
+	}
+	.bodytext {
+		@include bodytext;
+	}
+	.more-button {
+		display: flex;
+		justify-content: left;
+		span {
+			font-size: 1rem;
+			text-transform: uppercase;
+			margin-right: 15px;
+			font-family: merriweather, arial;	
+		}
+		i {
+			font-size: 1.4rem;
+		}
+	}
+	.price-wrapper {
+		font-family: merriweather, arial;
+		font-size: 1.6rem;
+		margin: 20px 50px;
+		border-top: 1px dotted #000;
+		border-bottom: 1px dotted #000;
+		p {
+			display: block;
+    		text-align: center;
+    		margin: 15px 0;
+		}
+	}
+	.button-wrapper {
+		margin: 40px 0;
+	}
+
+
+	.shop-link,
+	.mail-link {
+		text-decoration: none;
+		.shop-button,
+		.mail-button {
+			display: flex;
+			justify-content: space-between;
+			color: #fff;
+			text-transform: uppercase;
+			border-radius: 2px;
+			font-family: merriweather, arial;
+			padding: 16px;
+			text-decoration: none;
+			span {
+				font-size: 1.6rem;
+			}
+			i {
+				font-size: 2rem;
+			}
+		}
+
+	}
+	.shop-button {
+		background-color: #47d44e;
+		margin-bottom: 20px;
+	}
+	.mail-button {
+		background-color: #53cdef;
+	}
+}
+
+@media only screen and (min-width: $tablet) {
+	.product.content-element {
+		.header {
+			@include header--tablet;
+		}
+		.subheader {
+			@include subheader--tablet;
+		}
+		.bodytext {
+			@include bodytext--tablet;
+			margin: 30px 0;
+		}
+		.picture {
+			img {
+				width: 50%;
+    			margin: 0 auto;
+			}
+		}
+		.more-button {
+			span {	
+			}
+			i {
+			}
+		}
+		.price-wrapper {
+   			margin: 40px auto;
+   			width: 400px;
+		}
+
+		.shop-link,
+		.mail-link {
+			.shop-button,
+			.mail-button {
+				max-width: 400px;
+				span {
+				}
+				i {
+				}
+			}
+
+		}
+		.shop-button {
+			margin: 0 auto 20px; 
+		}
+		.mail-button {
+			margin: 0 auto; 
+		}
+	}
+}
+
+@media only screen and (min-width: $desktop) {
+	.product.content-element.product-detail {
+		margin: 60px 5em 80px;
+		.header {
+			@include header--desktop;
+		}
+		.subheader {
+			@include subheader--desktop;
+		}
+		.bodytext {
+			@include bodytext--desktop;
+		}
+		.price-wrapper {
+			p {
+				font-size: 2rem;
+			}
+		}
+		.shop-link .shop-button span,
+		.mail-link .mail-button span {
+			font-size: 1.8rem;
+		}
+	}
+}

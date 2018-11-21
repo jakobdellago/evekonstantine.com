@@ -1,0 +1,97 @@
+@mixin header {
+	font-family: merriweather, arial;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+@mixin header--tablet {
+	font-size: 2.5rem;
+	margin-bottom: 18px;
+}
+
+@mixin header--desktop {
+	font-size: 3.5rem;
+	margin-bottom: 30px;
+}
+
+@mixin bodytext {
+	font-size: 1.2rem;
+	line-height: 2.2rem;
+	font-family: 'Montserrat', sans-serif;
+	p {
+		margin: 30px 0;
+		font-weight: 400;
+	}
+}
+
+@mixin bodytext--tablet {
+	font-size: 1.4rem;
+	line-height: 2.5rem;
+	p {
+	    margin: 18px 0;
+	}
+}
+
+@mixin bodytext--desktop {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    p {
+    	margin: 30px 0;
+    }
+}
+
+@mixin button {
+	text-align: center;
+	width: 80px;
+	margin: 0 auto;
+	a {
+		font-family: merriweather;
+		font-style: italic;	
+		text-decoration: none;
+		font-size: 1.3rem;
+		color: #000;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		i {
+			font-size: 2rem;
+		}
+		span {
+		    line-height: 1;
+		}
+	}
+}
+
+@mixin subheader {
+	font-family: merriweather;
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+@mixin subheader--tablet {
+	font-size: 2.1rem;
+	margin-bottom: 35px;
+}
+
+@mixin subheader--desktop {
+	font-size: 2.8rem;
+	margin-bottom: 45px;
+}
+
+@mixin link-price-wrapper {
+	display: flex;
+	justify-content: space-between;
+	.more-button {
+		@include button;
+		margin: 0;
+		display: inline-block;
+		a {
+			justify-content: left;
+		}
+	}
+	.price {
+		font-family: merriweather, arial;
+		font-size: 1.4rem;
+	}
+}

@@ -1,0 +1,25 @@
+.separator-wrapper{
+	margin: 0 40px;
+	.separator {
+	    border-bottom: 1px dotted #000;
+	    height: 2px;
+	    width: auto;
+	    margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: $tablet) {
+	.separator-wrapper{
+		.separator {
+		    width: 300px;
+		}
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.separator-wrapper{
+		.separator {
+		    width: 500px;
+		}
+	}
+}
