@@ -18,6 +18,20 @@
 			@include button;
 		}
 	}
+	.audio-wrapper {
+		display: flex;
+	    justify-content: center;
+	    padding: 20px;
+	    audio {
+    	    width: 100%;
+	    }
+	}
+	.video-wrapper {
+		video {
+			width: 100%;
+			height: auto;
+		}
+	}
 }
 
 @media only screen and (min-width: $tablet) {

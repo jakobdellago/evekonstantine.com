@@ -135,15 +135,21 @@
                     "header",
                     "subheader",
                     "bodytext",
-                    "header_link",
-                    "image"
+                    "tx_mask_create_menu_point",
+                    "tx_mask_menu_point_header",
+                    "image",
+                    "media",
+                    "assets"
                 ],
                 "labels": [
                     "\u00dcberschrift",
                     "Unter\u00fcberschrift",
                     "Text",
-                    "Link",
-                    "Bild"
+                    "Create Menu Point",
+                    "Name for the Menu Point in the header",
+                    "Bild",
+                    "mp3",
+                    "video"
                 ]
             },
             "product_list": {
@@ -250,6 +256,16 @@
             "tx_mask_render_category_selectbox": {
                 "tt_content": {
                     "tx_mask_render_category_selectbox": "int(11) DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_create_menu_point": {
+                "tt_content": {
+                    "tx_mask_create_menu_point": "int(11) DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_menu_point_header": {
+                "tt_content": {
+                    "tx_mask_menu_point_header": "tinytext"
                 }
             }
         },
@@ -462,6 +478,33 @@
                 },
                 "exclude": "1",
                 "key": "render_category_selectbox"
+            },
+            "tx_mask_create_menu_point": {
+                "config": {
+                    "type": "check",
+                    "items": [
+                        [
+                            ""
+                        ]
+                    ],
+                    "cols": "",
+                    "default": ""
+                },
+                "exclude": "1",
+                "key": "create_menu_point"
+            },
+            "tx_mask_menu_point_header": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "menu_point_header"
             }
         }
     },

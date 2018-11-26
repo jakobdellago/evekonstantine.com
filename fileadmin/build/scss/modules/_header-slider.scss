@@ -1,66 +1,22 @@
-.header-slider {
+.header {
 	overflow: hidden;
 	position: relative;
-	img {
-		height: calc(100vh - 66px);
-		width: auto;
-		margin-left: 50%;
-    	transform: translateX(-50%);
+	.header-slider {
+		img {
+			height: calc(100vh - 66px);
+			width: auto;
+			margin-left: 50%;
+	    	transform: translateX(-50%);
+		}
 	}
-	.darkener {
-		    height: calc(100vh - 66px);
-    		width: 100%;
-		    position: absolute;
-		    background: #000;
-		    opacity: 0.25;
-		    z-index: 1
-	}
-	.content-wrapper {
-		position: absolute;
-		bottom: 100px;
-		/* UNCOMMENT TO CENTER CONTENT
-		bottom: 50%;
-    	transform: translateY(50%);
-    	*/
-		color: #fff;
+	.menu-points-wrapper {
+	    position: absolute;
+	    top: 0;
 	    width: 100%;
-    	text-align: center;
-    	z-index: 3;
-		.text {
-			font-weight: 700;
-			font-size: 1.6rem;
-			line-height: 2.7rem;
-		    padding: 0 50px;
-		}
-		.scroll-button {
-		    position: relative;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			width: 185px;
-			height: 35px;
-			margin: 40px auto 0;
-			border: 1px solid #fff;
-			transition: 0.2s ease-in;
-			span {
-				text-align: center;
-				text-transform: uppercase;
-				flex: 1 1 100%;
-				&:hover {
-					cursor: default;
-				}
-			}
-			i {
-				position: absolute;
-				right: 10px;
-			}
-			&:hover {
-				background: #fff;
-				span, i {
-					color: #000;
-				}
-			}
-		}
+	    height: 100%;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
 	}
 }
 

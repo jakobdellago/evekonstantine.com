@@ -1,5 +1,6 @@
-
-<div class="text-image-box content-element">
+<div class="text-image-box content-element {f:if(condition: '{data.tx_mask_create_menu_point} == 1', then: 'menu-point', else: 'no-menu-point')}"
+data-menu-point-uid="{f:if(condition: '{data.tx_mask_create_menu_point} == 1', then: '{data.uid}', else: 'no-menu-point')}"
+>
 	<div class="text-wrapper">
 
 		<f:if condition="{data.header}">
@@ -54,6 +55,23 @@
 
 	</f:for>
 	</f:if>
+
+	<f:if condition="{data.media}">
+		<f:for each="{data.media}" as="audio">
+			<div class="audio-wrapper">
+				<f:media file="{audio}"/>
+			</div>
+		</f:for>
+	</f:if>
+
+	<f:if condition="{data.assets}">
+		<f:for each="{data.assets}" as="video">
+			<div class="video-wrapper">
+				<f:media file="{video}" />
+			</div>
+		</f:for>
+	</f:if>
+	
 </div>
 
 

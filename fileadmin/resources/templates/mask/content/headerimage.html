@@ -1,6 +1,5 @@
 <div class="header-slider">
 
-
 	<f:if condition="{data.image}">
 		<f:for each="{data.image}" as="file">
 
@@ -28,15 +27,17 @@
 		</f:for>
 	</f:if>
 
-	<div class="content-wrapper">
-		<div class="text">
-			<f:format.html>{data.bodytext}</f:format.html>
+	<f:comment>
+		<div class="content-wrapper">
+			<div class="text">
+				<f:format.html>{data.bodytext}</f:format.html>
+			</div>
+			<div class="scroll-button">
+				<span>mehr</span>
+				<i class="icon-arrow-down"></i>
+			</div>
 		</div>
-		<div class="scroll-button">
-			<span>mehr</span>
-			<i class="icon-arrow-down"></i>
-		</div>
-	</div>
+	</f:comment>
 
 
 
