@@ -1,0 +1,19 @@
+.quote.content-element {
+	img {
+		width: 60px;
+		margin: 0 auto;
+		&:last-child {
+			transform: rotate(180deg);
+		}
+	}
+	.content {
+		margin: 30px 20px;
+		.bodytext, .speaker {
+			font-family: 'Pacifico', arial;
+		    font-size: 1.6rem;
+		    text-align: center;
+		    color: #4a4a4a;
+		}
+	}
+
+}

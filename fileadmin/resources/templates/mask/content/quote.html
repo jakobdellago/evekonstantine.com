@@ -1,0 +1,24 @@
+<div class="quote content-element">
+	<img src="/fileadmin/resources/images/quote.png">
+
+	<div class="content">
+
+		<f:if condition="{data.bodytext}">
+			<div class="bodytext">
+				<f:format.html>{data.bodytext}</f:format.html>
+			</div>
+		</f:if>
+
+		<f:if condition="{data.subheader}">
+			<br/>
+			<p class="speaker">
+				- {data.subheader}
+			</p>
+		</f:if>
+
+	</div>
+
+	<img src="/fileadmin/resources/images/quote.png">
+
+</div>
+

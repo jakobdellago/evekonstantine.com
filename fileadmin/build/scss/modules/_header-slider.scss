@@ -3,7 +3,7 @@
 	position: relative;
 	.header-slider {
 		img {
-			height: calc(100vh - 66px);
+			height: calc(100vh - 50px);
 			width: auto;
 			margin-left: 50%;
 	    	transform: translateX(-50%);
@@ -15,8 +15,25 @@
 	    width: 100%;
 	    height: 100%;
 	    display: flex;
-	    justify-content: center;
 	    align-items: center;
+	    flex-direction: column;
+    	justify-content: space-around;
+	    .menu-point {
+	    	width: 70%;
+		    margin: 0 20%;
+		    background: #fff;
+		    opacity: 0.5;
+		    padding: 15px;
+		    display: flex;
+		    justify-content: center;
+	    	.menu-point-header {
+		    	font-family: 'Pacifico', arial;
+		    	color: #000;
+    			opacity: initial;
+				font-size: 1.8rem;
+				text-align: center;
+	    	}
+	    }
 	}
 }
 

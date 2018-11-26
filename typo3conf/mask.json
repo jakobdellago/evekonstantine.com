@@ -116,6 +116,22 @@
                     "Selectbox anzeigen"
                 ]
             },
+            "quote": {
+                "label": "Quote",
+                "key": "quote",
+                "shortLabel": "",
+                "description": "",
+                "icon": "",
+                "color": "#000000",
+                "columns": [
+                    "bodytext",
+                    "subheader"
+                ],
+                "labels": [
+                    "Quote",
+                    "Speaker"
+                ]
+            },
             "separator": {
                 "label": "Separator",
                 "key": "separator",

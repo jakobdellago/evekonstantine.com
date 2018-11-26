@@ -22,25 +22,23 @@
 			</div>
 
 			<div class="mobile-nav">
-			    <div class="header">
-			    	<a href="http://www.jozeedesign.at">
-				    	<div class="logo">
-					        <img src="http://www.jozeedesign.at/fileadmin/resources/images/logo_comprimized.jpg"
-					            title="jozeeDesign"
-					            alt="jozeeDesign"
-					            srcset="{f:uri.image(src:'fileadmin/resources/images/logo_comprimized.jpg', width:'110c')},
-			                    {f:uri.image(src:'fileadmin/resources/images/logo_comprimized.jpg', width:'220c')} 2x,
-			                    {f:uri.image(src:'fileadmin/resources/images/logo_comprimized.jpg', width:'330c')} 3x"
-					        />
-						</div>
-					</a>
-					<div class="menu-opener">
-					    <div class="line"></div>
-					    <div class="line"></div>
-					    <div class="line"></div>
-					</div>
-			    </div>
-				<f:format.raw>{MOBILEMENU}</f:format.raw>
+				<div class="contact-button-wrapper">
+					<span class="contact-button">
+						Contact
+					</span>
+				</div>
+		    	<f:link.typolink parameter="1" title="Home" class="header-wrapper">
+		    		<span class="header">
+		    			Eves Coaching
+		    		</span>
+				</f:link.typolink>
+				<div class="icon-wrapper">
+					<i class="icon-arrow-down">
+					</i>
+				</div>
+			    <f:comment>
+					<f:format.raw>{MOBILEMENU}</f:format.raw>
+				</f:comment>
 			</div>
 
 			
@@ -53,7 +51,7 @@
 					{v:content.get(column: 0) -> f:variable(name: 'menu-points')}
 					<f:for each="{menu-points}" as="menu-point">
 	         			<f:if condition="tx_mask_create_menu_point">
-	         				<div class="menu-point" data-menu-point-uid="{menu-point.uid}">
+	         				<div class="menu-point" data-scroll-to-uid="{menu-point.uid}">
 	         					<span class="menu-point-header">
 	         						<f:if condition="{menu-point.tx_mask_menu_point_header}">
 	         							<f:then>
@@ -69,8 +67,6 @@
 					</f:for>
 				</div>
 			</div>
-
-			<f:debug>{_all}</f:debug>
 
 			<div class="content">
 				<f:format.raw>{CONTENT}</f:format.raw>
