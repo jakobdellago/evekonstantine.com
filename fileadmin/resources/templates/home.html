@@ -8,18 +8,13 @@
     		<f:render partial="Cookiebanner" arguments="{cookiebanner_text: general_data.0.bodytext}"/> 
     	</div>
 
-			<v:condition.iterator.contains needle="8" haystack="{v:page.rootline() -> v:iterator.extract(key: 'uid')}">
-   				<f:then>
-   					<div class="main-container product-detail-page">
-   				</f:then>
-   				<f:else>
-   					<div class="main-container">
-   				</f:else>
-			</v:condition.iterator.contains>
+		<div class="main-container">
 
-			<div class="main-nav">
-				<f:format.raw>{MAINMENU}</f:format.raw>
-			</div>
+			<f:comment>
+				<div class="main-nav">
+					<f:format.raw>{MAINMENU}</f:format.raw>
+				</div>
+			</f:comment>
 
 			<div class="mobile-nav">
 				<div class="contact-button-wrapper">
@@ -41,8 +36,6 @@
 				</f:comment>
 			</div>
 
-			
-
 			<div class="header">
 				
 				<f:format.raw>{HEADERSLIDER}</f:format.raw>
@@ -50,7 +43,7 @@
 				<div class="menu-points-wrapper">
 					{v:content.get(column: 0) -> f:variable(name: 'menu-points')}
 					<f:for each="{menu-points}" as="menu-point">
-	         			<f:if condition="tx_mask_create_menu_point">
+	         			<f:if condition="{menu-point.tx_mask_create_menu_point}">
 	         				<div class="menu-point" data-scroll-to-uid="{menu-point.uid}">
 	         					<span class="menu-point-header">
 	         						<f:if condition="{menu-point.tx_mask_menu_point_header}">
