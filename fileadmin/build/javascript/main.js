@@ -69,8 +69,7 @@ $(document).ready(function() {
 
 
 
-	var $large_slider = $('.product-link.slider.large .product-list-wrapper');
-	var $small_slider = $('.product-link.slider.small .product-list-wrapper');
+	var $image_slider = $('.text-image-box.content-element .image-wrapper');
 
 	//shufflejs config
 	if($('.product-link.selectbox').length > 0) {
@@ -153,43 +152,13 @@ $(document).ready(function() {
 	});
 
 
-
-	$large_slider.slick({
+	$image_slider.slick({
   		infinite: true,
-  		slidesToShow: 2,
-  		slidesToScroll: 1,
+  		slidesToShow: 1,
+        slidesToScroll: 1,
   		arrows: true,
-  		nextArrow: '<div class="arrow arrow-right"><i class="icon-arrow-right"></i></div>',
-  		prevArrow: '<div class="arrow arrow-left"><i class="icon-arrow-left"></i></div>',
-  		adaptiveHeight: true,
-  		//autoplay: true,
-  		//autoplaySpeed: 7000,
-  		responsive: [
-  			{
-  				breakpoint: 1280,
-  				settings: {
-  					slidesToShow: 1
-  				}
-  			}
-  		]
-	});
-
-
-	$small_slider.slick({
-  		infinite: true,
-  		slidesToShow: 3,
-  		slidesToScroll: 2,	
-  		arrows: false,
-  		adaptiveHeight: true,
-		centerMode: true,
-		responsive: [
-		    {
-		      breakpoint: 812,
-		      settings: {
-		        slidesToShow: 2,
-		      }
-		    }
-		]
+  		nextArrow: '<div class="arrow arrow-right"><img src="fileadmin/resources/images/arrowround-transparent-right.png"></div>',
+  		prevArrow: '<div class="arrow arrow-left"><img src="fileadmin/resources/images/arrowround-transparent-left.png"></div>',
 	});
 
 	/* SHOULD STOP AUTOPLAY WHEN SWIPED ONCE - STILL CAUSES BUGS WHILE SLIDING
