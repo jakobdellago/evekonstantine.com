@@ -45,7 +45,16 @@ a {
 	* {
 		box-sizing: border-box;
 	}
+	> .content {
+		background-image: url(../images/green-arrow.svg);
+	    background-size: 260% auto;
+	    background-position: 43% 0;
+	    overflow: auto;
+    	margin: 0;
+	}
 }
+
+
 
 .content-element {
 	margin: 40px 0;
