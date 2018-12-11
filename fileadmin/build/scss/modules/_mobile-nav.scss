@@ -44,6 +44,10 @@
     		margin-right: 10px;
     		float: right;
     		font-size: 3rem;
+    		transition: transform 0.3s;
+    		&.no-header-view {
+    			transform: rotateX(180deg);
+    		}
     	}
     }
 }
