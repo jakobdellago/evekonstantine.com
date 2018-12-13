@@ -135,18 +135,29 @@
 
 @media only screen and (min-width: $desktop) {
 	.footer {
+		display: flex;
 		.picture {
 			display: block;
     		position: relative;
     		overflow: hidden;
+    		max-height: none;
+    		flex: 1 1 50%;
+		}
+		.text-wrapper {
+			flex: 1 1 50%;
 		}
 	}
 }
 
 @media only screen and (min-width: $large-desktop) {
 	.footer {
+		display: flex;
 		.picture {
 			max-height: none;
+			flex: 1 1 50%;
+		}
+		.text-wrapper {
+			flex: 1 1 50%;
 		}
 	}
 }

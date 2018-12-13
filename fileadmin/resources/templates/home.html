@@ -1,5 +1,6 @@
 {namespace v=FluidTYPO3\Vhs\ViewHelpers}
 {v:content.get(column: 100, pageUid: 1, limit: 1) -> f:variable(name: 'general_data')}
+{v:content.get(column: 0) -> f:variable(name: 'menu-points')}
 
 <html>
 
@@ -10,11 +11,36 @@
 
 		<div class="main-container">
 
-			<f:comment>
-				<div class="main-nav">
-					<f:format.raw>{MAINMENU}</f:format.raw>
+
+			<div class="main-nav">
+
+				<f:if condition="{data.uid} == 1">
+  					<f:then>
+  						<div title="Home" class="header-wrapper on-home">
+				    		<span class="header">
+				    			Eves Coaching
+				    		</span>
+			    		</div>
+  					</f:then>
+  					<f:else>
+				    	<f:link.typolink parameter="1" title="Home" class="header-wrapper">
+				    		<span class="header">
+				    			Eves Coaching
+				    		</span>
+						</f:link.typolink>
+  					</f:else>
+				</f:if>
+
+				<f:render partial="menupoints" arguments="{menu-points: menu-points}"/> 
+
+				<div class="contact-button-wrapper">
+					<div class="contact-button">
+						<span class="contact-button-text">
+							Contact
+						</span>
+					</div>
 				</div>
-			</f:comment>
+			</div>
 
 			<div class="mobile-nav">
 				<div class="contact-button-wrapper">
@@ -24,43 +50,35 @@
 						</span>
 					</div>
 				</div>
-		    	<f:link.typolink parameter="1" title="Home" class="header-wrapper">
-		    		<span class="header">
-		    			Eves Coaching
-		    		</span>
-				</f:link.typolink>
+				
+				<f:if condition="{data.uid} == 1">
+  					<f:then>
+  						<div title="Home" class="header-wrapper on-home">
+				    		<span class="header">
+				    			Eves Coaching
+				    		</span>
+			    		</div>
+  					</f:then>
+  					<f:else>
+				    	<f:link.typolink parameter="1" title="Home" class="header-wrapper">
+				    		<span class="header">
+				    			Eves Coaching
+				    		</span>
+						</f:link.typolink>
+  					</f:else>
+				</f:if>
+
 				<div class="icon-wrapper">
 					<i class="icon-arrow-down header-view">
 					</i>
 				</div>
-			    <f:comment>
-					<f:format.raw>{MOBILEMENU}</f:format.raw>
-				</f:comment>
 			</div>
 
 			<div class="header">
 				
 				<f:format.raw>{HEADERSLIDER}</f:format.raw>
 
-				<div class="menu-points-wrapper">
-					{v:content.get(column: 0) -> f:variable(name: 'menu-points')}
-					<f:for each="{menu-points}" as="menu-point">
-	         			<f:if condition="{menu-point.tx_mask_create_menu_point}">
-	         				<div class="menu-point" data-scroll-to-uid="{menu-point.uid}">
-	         					<span class="menu-point-header">
-	         						<f:if condition="{menu-point.tx_mask_menu_point_header}">
-	         							<f:then>
-	         								{menu-point.tx_mask_menu_point_header}
-	         							</f:then>
-	         							<f:else>
-	         								{menu-point.header}
-	         							</f:else>
-	         						</f:if>
-	         					</span>
-	         				</div>
-	         			</f:if>
-					</f:for>
-				</div>
+				<f:render partial="menupoints" arguments="{menu-points: menu-points}"/> 
 			</div>
 
 			<div class="content">

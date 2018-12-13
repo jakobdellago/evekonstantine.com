@@ -66,25 +66,8 @@
 }
 
 @media only screen and (min-width: $desktop) {
-	.header-slider {
-	    height: calc(100vh - 66px);
-    	position: relative;
-    	overflow: hidden;
-		img {
-			width: 100%;
-    		height: auto;
-		}
-		.content-wrapper {
-			.text {
-				font-weight: 400;
-			    font-size: 3rem;
-			    line-height: 2;
-			    margin-bottom: 80px;
-			}
-			.scroll-button {
-				width: 250px;
-			}
-		}
+	.main-container > .header {
+		display: none;
 	}
 }
 

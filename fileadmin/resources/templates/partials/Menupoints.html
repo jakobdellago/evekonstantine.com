@@ -1,0 +1,18 @@
+<div class="menu-points-wrapper">
+	<f:for each="{menu-points}" as="menu-point">
+			<f:if condition="{menu-point.tx_mask_create_menu_point}">
+				<div class="menu-point" data-scroll-to-uid="{menu-point.uid}">
+					<span class="menu-point-header">
+						<f:if condition="{menu-point.tx_mask_menu_point_header}">
+							<f:then>
+								{menu-point.tx_mask_menu_point_header}
+							</f:then>
+							<f:else>
+								{menu-point.header}
+							</f:else>
+						</f:if>
+					</span>
+				</div>
+			</f:if>
+	</f:for>
+</div>
