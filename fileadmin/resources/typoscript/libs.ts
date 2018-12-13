@@ -50,3 +50,12 @@ lib.spaceToHexa20 {
     }
   }
 }
+
+lib.FORMULAR = CONTENT
+lib.FORMULAR {
+  table = tt_content
+  select {
+    pidInList = 6
+    where = colPos= 0
+  }
+}

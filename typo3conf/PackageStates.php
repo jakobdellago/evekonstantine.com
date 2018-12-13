@@ -119,6 +119,9 @@ return [
         'mask' => [
             'packagePath' => 'typo3conf/ext/mask/',
         ],
+        'powermail' => [
+            'packagePath' => 'typo3conf/ext/powermail/',
+        ],
         'vhs' => [
             'packagePath' => 'typo3conf/ext/vhs/',
         ],

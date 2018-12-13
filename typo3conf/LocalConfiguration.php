@@ -22,6 +22,7 @@ return [
     'EXT' => [
         'extConf' => [
             'mask' => 'a:9:{s:4:"json";s:19:"typo3conf/mask.json";s:18:"backendlayout_pids";s:3:"0,1";s:7:"content";s:43:"fileadmin/resources/templates/mask/content/";s:7:"layouts";s:51:"fileadmin/resources/templates/mask/content/Layouts/";s:8:"partials";s:52:"fileadmin/resources/templates/mask/content/Partials/";s:7:"backend";s:43:"fileadmin/resources/templates/mask/backend/";s:15:"layouts_backend";s:51:"fileadmin/resources/templates/mask/backend/Layouts/";s:16:"partials_backend";s:52:"fileadmin/resources/templates/mask/backend/Partials/";s:7:"preview";s:43:"fileadmin/resources/templates/mask/preview/";}',
+            'powermail' => 'a:8:{s:12:"disableIpLog";s:1:"1";s:27:"disableMarketingInformation";s:1:"0";s:20:"disableBackendModule";s:1:"0";s:24:"disablePluginInformation";s:1:"0";s:35:"disablePluginInformationMailPreview";s:1:"0";s:13:"enableCaching";s:1:"0";s:15:"l10n_mode_merge";s:1:"0";s:29:"replaceIrreWithElementBrowser";s:1:"0";}',
             'rsaauth' => 'a:1:{s:18:"temporaryDirectory";s:0:"";}',
             'saltedpasswords' => 'a:2:{s:3:"BE.";a:4:{s:21:"saltedPWHashingMethod";s:41:"TYPO3\\CMS\\Saltedpasswords\\Salt\\Pbkdf2Salt";s:11:"forceSalted";i:0;s:15:"onlyAuthService";i:0;s:12:"updatePasswd";i:1;}s:3:"FE.";a:5:{s:7:"enabled";i:1;s:21:"saltedPWHashingMethod";s:41:"TYPO3\\CMS\\Saltedpasswords\\Salt\\Pbkdf2Salt";s:11:"forceSalted";i:0;s:15:"onlyAuthService";i:0;s:12:"updatePasswd";i:1;}}',
         ],
