@@ -113,7 +113,7 @@ $(document).ready(function() {
 	//contact button scroll handling
 	$('.mobile-nav .contact-button-wrapper').on('click', function() {
 		$('html, body').animate({
-			scrollTop: $(document).height()-$(window).height()
+			scrollTop: $('.main-container .footer').offset().top - 50
 		},'slow');
 	});
 	

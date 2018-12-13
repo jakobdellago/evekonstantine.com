@@ -1,5 +1,5 @@
 @mixin header {
-	font-family: 'Pacifico', arial;
+	font-family: 'Merriweather', arial;
     font-size: 2rem;
     margin-bottom: 10px;
     text-align: center;
@@ -19,7 +19,7 @@
 @mixin bodytext {
 	font-size: 1.2rem;
 	line-height: 2.2rem;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	p {
 		margin: 30px 0;
 		font-weight: 400;
@@ -47,7 +47,7 @@
 	width: 80px;
 	margin: 0 auto;
 	a {
-		font-family: merriweather;
+		font-family: 'Merriweather', arial;
 		font-style: italic;	
 		text-decoration: none;
 		font-size: 1.3rem;
@@ -65,7 +65,7 @@
 }
 
 @mixin subheader {
-	font-family: 'Pacifico', arial;
+	font-family: 'Merriweather', arial;
 	font-size: 1.8rem;
 	text-align: center;
 	color: #4a4a4a;
@@ -93,7 +93,7 @@
 		}
 	}
 	.price {
-		font-family: merriweather, arial;
+		font-family: 'Merriweather', arial;
 		font-size: 1.4rem;
 	}
 }

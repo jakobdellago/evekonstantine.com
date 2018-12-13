@@ -17,3 +17,14 @@
 	}
 
 }
+
+@media screen and (min-width: $tablet) {
+	.quote.content-element {
+		.content {
+			.bodytext, .speaker {
+			    font-size: 1.8rem;
+			}
+		}
+
+	}
+}
