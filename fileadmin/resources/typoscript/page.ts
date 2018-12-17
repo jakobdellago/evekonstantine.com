@@ -48,20 +48,20 @@ page {
 
             #open graph BEGIN
             110 = TEXT
-            110.value = <meta property="og:url" content="http://www.jozeedesign.at" />
+            110.value = <meta property="og:url" content="http://www.evekonstantine.com/" />
             120 = TEXT
             120.value = <meta property="og:type" content="article" />
             130 = TEXT
-            130.value = <meta property="og:title" content="Jozee Design" />
+            130.value = <meta property="og:title" content="Eve Konstantine Coaching" />
             140 = TEXT
-            140.value = <meta property="og:description" content="Wunderbar fein! Viel geht hinein, mit dir nie allein, du Lieblingsrucksack. Huckepack!" />
-            #150 = TEXT
-            #150.value = <meta property="og:image" content="http://www.jozeedesign.at/fileadmin/resources/images/logo_color.png" /> 
+            140.value = <meta property="og:description" content="Leadership and Life Coaching" />
+            150 = TEXT
+            150.value = <meta property="og:image" content="http://www.jozeedesign.at/fileadmin/resources/images/eve.jpg" /> 
             160 = TEXT
-            160.value = <meta property="og:locale" content="de_AT" />
+            160.value = <meta property="og:locale" content="en_US" />
 
-            165 = TEXT
-            165.value = <meta property="fb:app_id" content="288028015138308" />
+            #165 = TEXT
+            #165.value = <meta property="fb:app_id" content="288028015138308" />
 
             #166 = TEXT
             #166.value = <meta property="og:imageTEST2" content="http://www.jozeedesign.at/fileadmin/user_upload/rucksack_rose.jpg" />

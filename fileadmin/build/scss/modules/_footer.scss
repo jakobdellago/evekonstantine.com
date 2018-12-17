@@ -136,7 +136,11 @@
 @media only screen and (min-width: $desktop) {
 	.footer {
 		display: flex;
+		background-color: $grey;
 		.picture {
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
 			display: block;
     		position: relative;
     		overflow: hidden;
